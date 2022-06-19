@@ -7,7 +7,7 @@
 <script src="/js/app.js"></script>
 
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
 
         /**
          * Validate the form
@@ -62,9 +62,9 @@
         <!-- End Page Header -->
 
         <div class="row">
-            <div class="col-lg-8">
+            <div class="col-lg-12">
                 <!-- Card -->
-                <div class="card mb-3 mb-lg-5">
+                <div class="card mb-8 mb-lg-0">
                     <!-- Header -->
                     <div class="card-header">
                         <h4 class="card-header-title">Thông tin bài viết</h4>
@@ -73,36 +73,47 @@
 
                     <!-- Body -->
                     <div class="card-body">
-                        <!-- Form Group -->
+                        <!-- Thêm tiêu đề -->
                         <div class="form-group">
-                            <label for="tieu_de" class="input-label">Tiêu đề  <i class="tio-help-outlined text-body ml-1" data-toggle="tooltip" data-placement="top" ></i></label>
+                            <label for="tieu_de" class="input-label">Tiêu đề <i class="tio-help-outlined text-body ml-1"
+                                                                                data-toggle="tooltip"
+                                                                                data-placement="top"></i></label>
 
-                            <input type="text" class="form-control" name="tieu_de" id="tieu_de" placeholder="Nhập tiêu đề bài viết ...." aria-label="Shirt, t-shirts, etc.">
+                            <input type="text" class="form-control" name="tieu_de" id="tieu_de"
+                                   placeholder="Nhập tiêu đề bài viết ...." aria-label="Shirt, t-shirts, etc.">
                         </div>
-                        <!-- End Form Group -->
+                        <!--  -->
 
-                        <!-- Form Group -->
+                        <!-- Thêm tên tác giả-->
                         <div class="form-group">
-                            <label for="tac_gia" class="input-label">Tác giả<i class="tio-help-outlined text-body ml-1" data-toggle="tooltip" data-placement="top"></i></label>
+                            <label for="tac_gia" class="input-label">Tác giả<i class="tio-help-outlined text-body ml-1"
+                                                                               data-toggle="tooltip"
+                                                                               data-placement="top"></i></label>
 
-                            <input type="text" class="form-control" name="tac_gia" id="tac_gia" placeholder="Nhập tên tác giả" aria-label="Shirt, t-shirts, etc." >
+                            <input type="text" class="form-control" name="tac_gia" id="tac_gia"
+                                   placeholder="Nhập tên tác giả" aria-label="Shirt, t-shirts, etc.">
                         </div>
 
                         <div class="form-group">
-                            <label for="ngay_tao" class="input-label">Ngày tạo <i class="tio-help-outlined text-body ml-1" data-toggle="tooltip" data-placement="top"></i></label>
+                            <label for="ngay_tao" class="input-label">Ngày tạo <i
+                                    class="tio-help-outlined text-body ml-1" data-toggle="tooltip"
+                                    data-placement="top"></i></label>
 
-                            <input type="date" class="form-control" name="ngay_tao" id="ngay_tao" >
+                            <input type="date" class="form-control" name="ngay_tao" id="ngay_tao">
                         </div>
-                        <!-- End Form Group -->
-
+                        <!--  -->
+                        <!-- Thêm chủ đề -->
                         <div class="row">
                             <div class="col-sm-6">
-                                <!-- Form Group -->
-                                <div class="form-group">
-                                    <label for="chu_de" class="input-label">Chủ đề<i class="tio-help-outlined text-body ml-1" data-toggle="tooltip" data-placement="top"></i></label>
 
-                                    <select id="chu_de" name="chu_de" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" style="width:85%;height: 30px">
-                                        <option value="" selected>Chọn chủ đề </option>
+                                <div class="form-group">
+                                    <label for="chu_de" class="input-label">Chủ đề<i
+                                            class="tio-help-outlined text-body ml-1" data-toggle="tooltip"
+                                            data-placement="top"></i></label>
+
+                                    <select id="chu_de" name="chu_de" class="form-select form-select-lg mb-3"
+                                            aria-label=".form-select-lg example" style="width:85%;height: 30px">
+                                        <option value="" selected>Chọn chủ đề</option>
                                         <option value="Thời sự">Thời sự</option>
                                         <option value="Kinh doanh">Kinh doanh</option>
                                         <option value="Khoa học">Khoa học</option>
@@ -113,15 +124,18 @@
 
                                     </select>
                                 </div>
-                                <!-- End Form Group -->
+
                             </div>
-
+                            <!-- Thêm tag -->
                             <div class="col-sm-6">
-                                <!-- Form Group -->
-                                <div class="form-group">
-                                    <label for="tag" class="input-label">Tag<i class="tio-help-outlined text-body ml-1" data-toggle="tooltip" data-placement="top"></i></label>
 
-                                    <select id="tag" name="tag" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" style="width:85%;height: 30px">
+                                <div class="form-group">
+                                    <label for="tag" class="input-label">Tag<i class="tio-help-outlined text-body ml-1"
+                                                                               data-toggle="tooltip"
+                                                                               data-placement="top"></i></label>
+
+                                    <select id="tag" name="tag" class="form-select form-select-lg mb-3"
+                                            aria-label=".form-select-lg example" style="width:85%;height: 30px">
                                         <option value="" selected>Chọn tag</option>
                                         <option value="Xu hướng">Xu hướng</option>
                                         <option value="Toàn cầu">Toàn cầu</option>
@@ -133,27 +147,111 @@
 
                                     </select>
                                 </div>
-                                <!-- End Form Group -->
+
                             </div>
                         </div>
-                        <!-- End Row -->
 
-                        <label class="input-label">Tóm tắt nội dung <span class="input-label-secondary">(Optional)</span></label>
+                        <!-- Thêm nội dung phụ -->
+                        <label class="input-label">Tóm tắt nội dung <span
 
-                        <!-- Quill -->
+                                    class="input-label-secondary">(Optional)</span></label>
+
+
+
+                        <!--Noi dung phu -->
                         <div class="quill-custom">
-                            <div class="ql-toolbar ql-snow"><span class="ql-formats"><span class="ql-header ql-picker"><span class="ql-picker-label" tabindex="0" role="button" aria-expanded="false" aria-controls="ql-picker-options-0"><svg viewBox="0 0 18 18"> <polygon class="ql-stroke" points="7 11 9 13 11 11 7 11"></polygon> <polygon class="ql-stroke" points="7 7 9 5 11 7 7 7"></polygon> </svg></span><span class="ql-picker-options" aria-hidden="true" tabindex="-1" id="ql-picker-options-0"><span tabindex="0" role="button" class="ql-picker-item" data-value="1"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="2"></span><span tabindex="0" role="button" class="ql-picker-item" data-value="3"></span><span tabindex="0" role="button" class="ql-picker-item ql-selected"></span></span></span><select class="ql-header" style="display: none;"><option value="1"></option><option value="2"></option><option value="3"></option><option selected="selected"></option></select></span><span class="ql-formats"><button type="button" class="ql-bold"><svg viewBox="0 0 18 18"> <path class="ql-stroke" d="M5,4H9.5A2.5,2.5,0,0,1,12,6.5v0A2.5,2.5,0,0,1,9.5,9H5A0,0,0,0,1,5,9V4A0,0,0,0,1,5,4Z"></path> <path class="ql-stroke" d="M5,9h5.5A2.5,2.5,0,0,1,13,11.5v0A2.5,2.5,0,0,1,10.5,14H5a0,0,0,0,1,0,0V9A0,0,0,0,1,5,9Z"></path> </svg></button><button type="button" class="ql-italic"><svg viewBox="0 0 18 18"> <line class="ql-stroke" x1="7" x2="13" y1="4" y2="4"></line> <line class="ql-stroke" x1="5" x2="11" y1="14" y2="14"></line> <line class="ql-stroke" x1="8" x2="10" y1="14" y2="4"></line> </svg></button><button type="button" class="ql-underline"><svg viewBox="0 0 18 18"> <path class="ql-stroke" d="M5,3V9a4.012,4.012,0,0,0,4,4H9a4.012,4.012,0,0,0,4-4V3"></path> <rect class="ql-fill" height="1" rx="0.5" ry="0.5" width="12" x="3" y="15"></rect> </svg></button><button type="button" class="ql-link"><svg viewBox="0 0 18 18"> <line class="ql-stroke" x1="7" x2="11" y1="7" y2="11"></line> <path class="ql-even ql-stroke" d="M8.9,4.577a3.476,3.476,0,0,1,.36,4.679A3.476,3.476,0,0,1,4.577,8.9C3.185,7.5,2.035,6.4,4.217,4.217S7.5,3.185,8.9,4.577Z"></path> <path class="ql-even ql-stroke" d="M13.423,9.1a3.476,3.476,0,0,0-4.679-.36,3.476,3.476,0,0,0,.36,4.679c1.392,1.392,2.5,2.542,4.679.36S14.815,10.5,13.423,9.1Z"></path> </svg></button></span><span class="ql-formats"><button type="button" class="ql-list" value="ordered"><svg viewBox="0 0 18 18"> <line class="ql-stroke" x1="7" x2="15" y1="4" y2="4"></line> <line class="ql-stroke" x1="7" x2="15" y1="9" y2="9"></line> <line class="ql-stroke" x1="7" x2="15" y1="14" y2="14"></line> <line class="ql-stroke ql-thin" x1="2.5" x2="4.5" y1="5.5" y2="5.5"></line> <path class="ql-fill" d="M3.5,6A0.5,0.5,0,0,1,3,5.5V3.085l-0.276.138A0.5,0.5,0,0,1,2.053,3c-0.124-.247-0.023-0.324.224-0.447l1-.5A0.5,0.5,0,0,1,4,2.5v3A0.5,0.5,0,0,1,3.5,6Z"></path> <path class="ql-stroke ql-thin" d="M4.5,10.5h-2c0-.234,1.85-1.076,1.85-2.234A0.959,0.959,0,0,0,2.5,8.156"></path> <path class="ql-stroke ql-thin" d="M2.5,14.846a0.959,0.959,0,0,0,1.85-.109A0.7,0.7,0,0,0,3.75,14a0.688,0.688,0,0,0,.6-0.736,0.959,0.959,0,0,0-1.85-.109"></path> </svg></button><button type="button" class="ql-list" value="bullet"><svg viewBox="0 0 18 18"> <line class="ql-stroke" x1="6" x2="15" y1="4" y2="4"></line> <line class="ql-stroke" x1="6" x2="15" y1="9" y2="9"></line> <line class="ql-stroke" x1="6" x2="15" y1="14" y2="14"></line> <line class="ql-stroke" x1="3" x2="3" y1="4" y2="4"></line> <line class="ql-stroke" x1="3" x2="3" y1="9" y2="9"></line> <line class="ql-stroke" x1="3" x2="3" y1="14" y2="14"></line> </svg></button></span><span class="ql-formats"><button type="button" class="ql-clean"><svg class="" viewBox="0 0 18 18"> <line class="ql-stroke" x1="5" x2="13" y1="3" y2="3"></line> <line class="ql-stroke" x1="6" x2="9.35" y1="12" y2="3"></line> <line class="ql-stroke" x1="11" x2="15" y1="11" y2="15"></line> <line class="ql-stroke" x1="15" x2="11" y1="11" y2="15"></line> <rect class="ql-fill" height="1" rx="0.5" ry="0.5" width="7" x="2" y="14"></rect> </svg></button></span></div><div class="js-quill ql-container ql-snow" style="min-height: 15rem;" data-hs-quill-options="{
-                          &quot;placeholder&quot;: &quot;Nhập nội dung tóm tắt của bài viết...&quot;
-                         }"><div class="ql-editor ql-blank" data-gramm="false" contenteditable="true" data-placeholder="Type your description..."><p><br></p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" rel="noopener noreferrer" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+                            <div class="ql-toolbar ql-snow"><span class="ql-formats"><span
+                                    class="ql-header ql-picker"><span class="ql-picker-label" tabindex="0" role="button"
+                                                                      aria-expanded="false"
+                                                                      aria-controls="ql-picker-options-0"><svg
+                                    viewBox="0 0 18 18"> <polygon class="ql-stroke"
+                                                                  points="7 11 9 13 11 11 7 11"></polygon> <polygon
+                                    class="ql-stroke" points="7 7 9 5 11 7 7 7"></polygon> </svg></span><span
+                                    class="ql-picker-options" aria-hidden="true" tabindex="-1" id="select"><span
+                                    tabindex="0" role="button" class="ql-picker-item" data-value="1"></span><span
+                                    tabindex="0" role="button" class="ql-picker-item" data-value="2"></span><span
+                                    tabindex="0" role="button" class="ql-picker-item" data-value="3"></span><span
+                                    tabindex="0" role="button"
+                                    class="ql-picker-item ql-selected"></span></span></span><select class="ql-header"
+                                                                                                    style="display: none;"><option
+                                    value="1"></option><option value="2"></option><option value="3"></option><option
+                                    selected="selected"></option></select></span><span class="ql-formats"><button
+                                    type="button" class="ql-bold"><svg viewBox="0 0 18 18"> <path class="ql-stroke"
+                                                                                                  d="M5,4H9.5A2.5,2.5,0,0,1,12,6.5v0A2.5,2.5,0,0,1,9.5,9H5A0,0,0,0,1,5,9V4A0,0,0,0,1,5,4Z"></path> <path
+                                    class="ql-stroke"
+                                    d="M5,9h5.5A2.5,2.5,0,0,1,13,11.5v0A2.5,2.5,0,0,1,10.5,14H5a0,0,0,0,1,0,0V9A0,0,0,0,1,5,9Z"></path> </svg></button><button
+                                    type="button" class="ql-italic"><svg viewBox="0 0 18 18"> <line class="ql-stroke"
+                                                                                                    x1="7" x2="13"
+                                                                                                    y1="4"
+                                                                                                    y2="4"></line> <line
+                                    class="ql-stroke" x1="5" x2="11" y1="14" y2="14"></line> <line class="ql-stroke"
+                                                                                                   x1="8" x2="10"
+                                                                                                   y1="14"
+                                                                                                   y2="4"></line> </svg></button><button
+                                    type="button" class="ql-underline"><svg viewBox="0 0 18 18"> <path class="ql-stroke"
+                                                                                                       d="M5,3V9a4.012,4.012,0,0,0,4,4H9a4.012,4.012,0,0,0,4-4V3"></path> <rect
+                                    class="ql-fill" height="1" rx="0.5" ry="0.5" width="12" x="3" y="15"></rect> </svg></button><button
+                                    type="button" class="ql-link"><svg viewBox="0 0 18 18"> <line class="ql-stroke"
+                                                                                                  x1="7" x2="11" y1="7"
+                                                                                                  y2="11"></line> <path
+                                    class="ql-even ql-stroke"
+                                    d="M8.9,4.577a3.476,3.476,0,0,1,.36,4.679A3.476,3.476,0,0,1,4.577,8.9C3.185,7.5,2.035,6.4,4.217,4.217S7.5,3.185,8.9,4.577Z"></path> <path
+                                    class="ql-even ql-stroke"
+                                    d="M13.423,9.1a3.476,3.476,0,0,0-4.679-.36,3.476,3.476,0,0,0,.36,4.679c1.392,1.392,2.5,2.542,4.679.36S14.815,10.5,13.423,9.1Z"></path> </svg></button></span><span
+                                    class="ql-formats"><button type="button" class="ql-list" value="ordered"><svg
+                                    viewBox="0 0 18 18"> <line class="ql-stroke" x1="7" x2="15" y1="4" y2="4"></line> <line
+                                    class="ql-stroke" x1="7" x2="15" y1="9" y2="9"></line> <line class="ql-stroke"
+                                                                                                 x1="7" x2="15" y1="14"
+                                                                                                 y2="14"></line> <line
+                                    class="ql-stroke ql-thin" x1="2.5" x2="4.5" y1="5.5" y2="5.5"></line> <path
+                                    class="ql-fill"
+                                    d="M3.5,6A0.5,0.5,0,0,1,3,5.5V3.085l-0.276.138A0.5,0.5,0,0,1,2.053,3c-0.124-.247-0.023-0.324.224-0.447l1-.5A0.5,0.5,0,0,1,4,2.5v3A0.5,0.5,0,0,1,3.5,6Z"></path> <path
+                                    class="ql-stroke ql-thin"
+                                    d="M4.5,10.5h-2c0-.234,1.85-1.076,1.85-2.234A0.959,0.959,0,0,0,2.5,8.156"></path> <path
+                                    class="ql-stroke ql-thin"
+                                    d="M2.5,14.846a0.959,0.959,0,0,0,1.85-.109A0.7,0.7,0,0,0,3.75,14a0.688,0.688,0,0,0,.6-0.736,0.959,0.959,0,0,0-1.85-.109"></path> </svg></button><button
+                                    type="button" class="ql-list" value="bullet"><svg viewBox="0 0 18 18"> <line
+                                    class="ql-stroke" x1="6" x2="15" y1="4" y2="4"></line> <line class="ql-stroke"
+                                                                                                 x1="6" x2="15" y1="9"
+                                                                                                 y2="9"></line> <line
+                                    class="ql-stroke" x1="6" x2="15" y1="14" y2="14"></line> <line class="ql-stroke"
+                                                                                                   x1="3" x2="3" y1="4"
+                                                                                                   y2="4"></line> <line
+                                    class="ql-stroke" x1="3" x2="3" y1="9" y2="9"></line> <line class="ql-stroke" x1="3"
+                                                                                                x2="3" y1="14"
+                                                                                                y2="14"></line> </svg></button></span><span
+                                    class="ql-formats"><button type="button" class="ql-clean"><svg class=""
+                                                                                                   viewBox="0 0 18 18"> <line
+                                    class="ql-stroke" x1="5" x2="13" y1="3" y2="3"></line> <line class="ql-stroke"
+                                                                                                 x1="6" x2="9.35"
+                                                                                                 y1="12" y2="3"></line> <line
+                                    class="ql-stroke" x1="11" x2="15" y1="11" y2="15"></line> <line class="ql-stroke"
+                                                                                                    x1="15" x2="11"
+                                                                                                    y1="11"
+                                                                                                    y2="15"></line> <rect
+                                    class="ql-fill" height="1" rx="0.5" ry="0.5" width="7" x="2"
+                                    y="14"></rect> </svg></button></span></div>
+                            <div class="js-quill ql-container ql-snow" style="min-height: 12rem;"
+                                 data-hs-quill-options="{
+                          &quot;placeholder&quot;: &quot; Nhập nội dung tóm tắt của bài viết ...&quot;
+                         }">
+                                <div class="ql-editor ql-blank" data-gramm="false" contenteditable="true"
+                                     data-placeholder="Nhập nội dung tóm tắt của bài viết(tối đa 1000 ký tự)..."><p><br></p></div>
+                                <div class="ql-clipboard" contenteditable="true" tabindex="-1"></div>
+                                <div class="ql-tooltip ql-hidden"><a class="ql-preview" rel="noopener noreferrer"
+                                                                     target="_blank" href="about:blank"></a><input
+                                        type="text" name="noi_dung_phu" data-formula="e=mc^2" data-link="https://quilljs.com"
+                                        data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div>
+                            </div>
                         </div>
-                        <!-- End Quill -->
+                        <!-- end noi dung phu -->
                     </div>
                     <!-- Body -->
                 </div>
                 <!-- End Card -->
 
                 <!-- Card -->
-                <div class="card mb-3 mb-lg-5">
+                <div class="card mb-8 mb-lg-0">
                     <!-- Header -->
                     <div class="card-header">
                         <h4 class="card-header-title">Upload ảnh</h4>
@@ -162,419 +260,145 @@
                         <div class="hs-unfold">
 
 
-
                         </div>
-                        <!-- End Unfold -->
-                    </div>
-                    <!-- End Header -->
 
-                    <!-- Body -->
+                    </div>
+
+
+                    <!-- Ảnh upload -->
                     <div class="card-body">
                         <!-- Dropzone -->
-                        <div id="anh" name="anh" class="js-dropzone dropzone-custom custom-file-boxed dz-clickable">
+                        <div id="anh" class="js-dropzone dropzone-custom custom-file-boxed dz-clickable" name="anh">
                             <div class="dz-message custom-file-boxed-label">
-                                <img class="avatar avatar-xl avatar-4by3 mb-3" src="/public/images/upload-image.svg" alt="Image Description">
+                                <img class="avatar avatar-xl avatar-4by3 mb-3" src="\public\images\upload-image.svg" alt="Image Description">
                                 <h5 class="mb-1">Choose files to upload</h5>
                                 <p class="mb-2">or</p>
                                 <span class="btn btn-sm btn-primary">Browse files</span>
                             </div>
                         </div>
-                        <!-- End Dropzone -->
+
                     </div>
-                    <!-- Body -->
+
+
+
                 </div>
-                <!-- End Card -->
 
-                <!-- Card -->
-                <div class="card">
-                    <!-- Header -->
-                    <div class="card-header">
-                        <h4 class="card-header-title">Variants</h4>
+                <!--Noi dung chinh -->
+                <label class="input-label">Nội dung chính bài viết <span
+
+                        class="input-label-secondary">(Optional)</span></label>
+
+
+
+
+                <div class="quill-custom" style="padding-bottom: 20%">
+                    <div class="ql-toolbar ql-snow"><span class="ql-formats"><span
+                            class="ql-header ql-picker"><span class="ql-picker-label" tabindex="0" role="button"
+                                                              aria-expanded="false"
+                                                              aria-controls="ql-picker-options-0"><svg
+                            viewBox="0 0 18 18"> <polygon class="ql-stroke"
+                                                          points="7 11 9 13 11 11 7 11"></polygon> <polygon
+                            class="ql-stroke" points="7 7 9 5 11 7 7 7"></polygon> </svg></span><span
+                            class="ql-picker-options" aria-hidden="true" tabindex="-1" id="selectx"><span
+                            tabindex="0" role="button" class="ql-picker-item" data-value="1"></span><span
+                            tabindex="0" role="button" class="ql-picker-item" data-value="2"></span><span
+                            tabindex="0" role="button" class="ql-picker-item" data-value="3"></span><span
+                            tabindex="0" role="button"
+                            class="ql-picker-item ql-selected"></span></span></span><select class="ql-header"
+                                                                                            style="display: none;"><option
+                            value="1"></option><option value="2"></option><option value="3"></option><option
+                            selected="selected"></option></select></span><span class="ql-formats"><button
+                            type="button" class="ql-bold"><svg viewBox="0 0 18 18"> <path class="ql-stroke"
+                                                                                          d="M5,4H9.5A2.5,2.5,0,0,1,12,6.5v0A2.5,2.5,0,0,1,9.5,9H5A0,0,0,0,1,5,9V4A0,0,0,0,1,5,4Z"></path> <path
+                            class="ql-stroke"
+                            d="M5,9h5.5A2.5,2.5,0,0,1,13,11.5v0A2.5,2.5,0,0,1,10.5,14H5a0,0,0,0,1,0,0V9A0,0,0,0,1,5,9Z"></path> </svg></button><button
+                            type="button" class="ql-italic"><svg viewBox="0 0 18 18"> <line class="ql-stroke"
+                                                                                            x1="7" x2="13"
+                                                                                            y1="4"
+                                                                                            y2="4"></line> <line
+                            class="ql-stroke" x1="5" x2="11" y1="14" y2="14"></line> <line class="ql-stroke"
+                                                                                           x1="8" x2="10"
+                                                                                           y1="14"
+                                                                                           y2="4"></line> </svg></button><button
+                            type="button" class="ql-underline"><svg viewBox="0 0 18 18"> <path class="ql-stroke"
+                                                                                               d="M5,3V9a4.012,4.012,0,0,0,4,4H9a4.012,4.012,0,0,0,4-4V3"></path> <rect
+                            class="ql-fill" height="1" rx="0.5" ry="0.5" width="12" x="3" y="15"></rect> </svg></button><button
+                            type="button" class="ql-link"><svg viewBox="0 0 18 18"> <line class="ql-stroke"
+                                                                                          x1="7" x2="11" y1="7"
+                                                                                          y2="11"></line> <path
+                            class="ql-even ql-stroke"
+                            d="M8.9,4.577a3.476,3.476,0,0,1,.36,4.679A3.476,3.476,0,0,1,4.577,8.9C3.185,7.5,2.035,6.4,4.217,4.217S7.5,3.185,8.9,4.577Z"></path> <path
+                            class="ql-even ql-stroke"
+                            d="M13.423,9.1a3.476,3.476,0,0,0-4.679-.36,3.476,3.476,0,0,0,.36,4.679c1.392,1.392,2.5,2.542,4.679.36S14.815,10.5,13.423,9.1Z"></path> </svg></button></span><span
+                            class="ql-formats"><button type="button" class="ql-list" value="ordered"><svg
+                            viewBox="0 0 18 18"> <line class="ql-stroke" x1="7" x2="15" y1="4" y2="4"></line> <line
+                            class="ql-stroke" x1="7" x2="15" y1="9" y2="9"></line> <line class="ql-stroke"
+                                                                                         x1="7" x2="15" y1="14"
+                                                                                         y2="14"></line> <line
+                            class="ql-stroke ql-thin" x1="2.5" x2="4.5" y1="5.5" y2="5.5"></line> <path
+                            class="ql-fill"
+                            d="M3.5,6A0.5,0.5,0,0,1,3,5.5V3.085l-0.276.138A0.5,0.5,0,0,1,2.053,3c-0.124-.247-0.023-0.324.224-0.447l1-.5A0.5,0.5,0,0,1,4,2.5v3A0.5,0.5,0,0,1,3.5,6Z"></path> <path
+                            class="ql-stroke ql-thin"
+                            d="M4.5,10.5h-2c0-.234,1.85-1.076,1.85-2.234A0.959,0.959,0,0,0,2.5,8.156"></path> <path
+                            class="ql-stroke ql-thin"
+                            d="M2.5,14.846a0.959,0.959,0,0,0,1.85-.109A0.7,0.7,0,0,0,3.75,14a0.688,0.688,0,0,0,.6-0.736,0.959,0.959,0,0,0-1.85-.109"></path> </svg></button><button
+                            type="button" class="ql-list" value="bullet"><svg viewBox="0 0 18 18"> <line
+                            class="ql-stroke" x1="6" x2="15" y1="4" y2="4"></line> <line class="ql-stroke"
+                                                                                         x1="6" x2="15" y1="9"
+                                                                                         y2="9"></line> <line
+                            class="ql-stroke" x1="6" x2="15" y1="14" y2="14"></line> <line class="ql-stroke"
+                                                                                           x1="3" x2="3" y1="4"
+                                                                                           y2="4"></line> <line
+                            class="ql-stroke" x1="3" x2="3" y1="9" y2="9"></line> <line class="ql-stroke" x1="3"
+                                                                                        x2="3" y1="14"
+                                                                                        y2="14"></line> </svg></button></span><span
+                            class="ql-formats"><button type="button" class="ql-clean"><svg class=""
+                                                                                           viewBox="0 0 18 18"> <line
+                            class="ql-stroke" x1="5" x2="13" y1="3" y2="3"></line> <line class="ql-stroke"
+                                                                                         x1="6" x2="9.35"
+                                                                                         y1="12" y2="3"></line> <line
+                            class="ql-stroke" x1="11" x2="15" y1="11" y2="15"></line> <line class="ql-stroke"
+                                                                                            x1="15" x2="11"
+                                                                                            y1="11"
+                                                                                            y2="15"></line> <rect
+                            class="ql-fill" height="1" rx="0.5" ry="0.5" width="7" x="2"
+                            y="14"></rect> </svg></button></span></div>
+                    <div class="js-quill ql-container ql-snow" style="min-height: 15rem;"
+                         data-hs-quill-options="{
+                          &quot;placeholder&quot;: &quot; Nhập nội dung bài viết ...&quot;
+                         }">
+                        <div class="ql-editor ql-blank" data-gramm="false" contenteditable="true"
+                             data-placeholder="Nhập nội dung bài viết..."><p><br></p></div>
+                        <div class="ql-clipboard" contenteditable="true" tabindex="-1"></div>
+                        <div class="ql-tooltip ql-hidden"><a class="ql-preview" rel="noopener noreferrer"
+                                                             target="_blank" href="about:blank"></a><input
+                                type="text" name="noi_dung_chinh" data-formula="e=mc^2" data-link="https://quilljs.com"
+                                data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div>
                     </div>
-                    <!-- End Header -->
-
-                    <!-- Body -->
-                    <div class="card-body">
-                        <h6 class="text-cap">Options</h6>
-
-                        <div class="js-add-field" data-hs-add-field-options="{
-                      &quot;template&quot;: &quot;#addAnotherOptionFieldTemplate&quot;,
-                      &quot;container&quot;: &quot;#addAnotherOptionFieldContainer&quot;,
-                      &quot;defaultCreated&quot;: 0
-                    }">
-                            <!-- Form Group -->
-                            <div class="form-group">
-                                <div class="row">
-                                    <div class="col-4">
-                                        <div class="input-group-prepend">
-                                            <!-- Select -->
-                                            <select class="js-select2-custom custom-select select2-hidden-accessible" size="1" style="opacity: 0;" data-hs-select2-options="{
-                                    &quot;minimumResultsForSearch&quot;: &quot;Infinity&quot;
-                                  }" data-select2-id="7" tabindex="-1" aria-hidden="true">
-                                                <option value="Size" data-select2-id="9">Size</option>
-                                                <option value="Color" data-select2-id="10">Color</option>
-                                                <option value="Material" data-select2-id="11">Material</option>
-                                                <option value="Style" data-select2-id="12">Style</option>
-                                                <option value="Title" data-select2-id="13">Title</option>
-                                            </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="8" style="width: 100%;"><span class="selection"><span class="select2-selection custom-select" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-uauh-container"><span class="select2-selection__rendered" id="select2-uauh-container" role="textbox" aria-readonly="true" title="Size"><span>Size</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
-                                            <!-- End Select -->
-                                        </div>
-                                    </div>
-
-                                    <div class="col-8">
-                                        <!-- Select2 -->
-                                        <select class="js-select2-custom custom-select select2-hidden-accessible" size="1" style="opacity: 0;" multiple="" data-hs-select2-options="{
-                                  &quot;minimumResultsForSearch&quot;: &quot;Infinity&quot;,
-                                  &quot;placeholder&quot;: &quot;Separate options with enter&quot;,
-                                  &quot;tags&quot;: true
-                                }" data-select2-id="14" tabindex="-1" aria-hidden="true">
-                                            <option label="empty" data-select2-id="16"></option>
-                                        </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="15" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--multiple custom-select" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1" aria-disabled="false"><ul class="select2-selection__rendered"><li class="select2-search select2-search--inline"><input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" role="searchbox" aria-autocomplete="list" placeholder="Separate options with enter" style="width: 620.766px;"></li></ul></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
-                                        <!-- End Select2 -->
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Form Group -->
-
-                            <!-- Container For Input Field -->
-                            <div id="addAnotherOptionFieldContainer"></div>
-
-                            <a href="javascript:;" class="js-create-field btn btn-sm btn-no-focus btn-ghost-primary">
-                                <i class="tio-add"></i> Add another option
-                            </a>
-                        </div>
-
-                        <!-- Add Another Option Input Field -->
-                        <div id="addAnotherOptionFieldTemplate" style="display: none;">
-                            <!-- Form Group -->
-                            <div class="form-group">
-                                <div class="row">
-                                    <div class="col-4">
-                                        <div class="input-group-prepend">
-                                            <!-- Select -->
-                                            <select class="js-select2-custom-dynamic custom-select" size="1" style="opacity: 0;" data-hs-select2-options="{
-                                    &quot;minimumResultsForSearch&quot;: &quot;Infinity&quot;
-                                  }">
-                                                <option value="Size">Size</option>
-                                                <option value="Color">Color</option>
-                                                <option value="Material">Material</option>
-                                                <option value="Style">Style</option>
-                                                <option value="Title">Title</option>
-                                            </select>
-                                            <!-- End Select -->
-                                        </div>
-                                    </div>
-
-                                    <div class="col-8">
-                                        <!-- Select2 -->
-                                        <select class="js-select2-custom-dynamic custom-select" size="1" style="opacity: 0;" multiple="" data-hs-select2-options="{
-                                  &quot;minimumResultsForSearch&quot;: &quot;Infinity&quot;,
-                                  &quot;placeholder&quot;: &quot;Separate options with enter&quot;,
-                                  &quot;tags&quot;: true
-                                }">
-                                            <option label="empty"></option>
-                                        </select>
-                                        <!-- End Select2 -->
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Form Group -->
-                        </div>
-                        <!-- End Add Another Option Input Field -->
-                    </div>
-                    <!-- Body -->
                 </div>
-                <!-- End Card -->
+                <!-- end noi dung chinh -->
             </div>
-
-            <div class="col-lg-4">
-                <!-- Card -->
-                <div class="card mb-3 mb-lg-5">
-                    <!-- Header -->
-                    <div class="card-header">
-                        <h4 class="card-header-title">Pricing</h4>
-                    </div>
-                    <!-- End Header -->
-
-                    <!-- Body -->
-                    <div class="card-body">
-                        <!-- Form Group -->
-                        <div class="form-group">
-                            <label for="priceNameLabel" class="input-label">Price</label>
-
-                            <div class="input-group">
-                                <input type="text" class="form-control" name="priceName" id="priceNameLabel" placeholder="0.00" aria-label="0.00">
-
-                                <div class="input-group-append">
-                                    <!-- Select -->
-                                    <div id="priceSelect" class="select2-custom select2-custom-right">
-                                        <select class="js-select2-custom custom-select select2-hidden-accessible" size="1" style="opacity: 0;" data-hs-select2-options="{
-                                    &quot;dropdownParent&quot;: &quot;#priceSelect&quot;,
-                                    &quot;dropdownAutoWidth&quot;: true,
-                                    &quot;width&quot;: true
-                                  }" data-select2-id="17" tabindex="-1" aria-hidden="true">
-                                            <option value="USD" selected="" data-select2-id="19">USD</option>
-                                            <option value="AED" data-select2-id="20">AED</option>
-                                            <option value="AFN" data-select2-id="21">AFN</option>
-                                            <option value="ALL" data-select2-id="22">ALL</option>
-                                            <option value="AMD" data-select2-id="23">AMD</option>
-                                            <option value="ANG" data-select2-id="24">ANG</option>
-                                            <option value="AOA" data-select2-id="25">AOA</option>
-                                            <option value="ARS" data-select2-id="26">ARS</option>
-                                            <option value="AUD" data-select2-id="27">AUD</option>
-                                            <option value="AWG" data-select2-id="28">AWG</option>
-                                            <option value="AZN" data-select2-id="29">AZN</option>
-                                            <option value="BAM" data-select2-id="30">BAM</option>
-                                            <option value="BBD" data-select2-id="31">BBD</option>
-                                            <option value="BDT" data-select2-id="32">BDT</option>
-                                            <option value="BGN" data-select2-id="33">BGN</option>
-                                            <option value="BIF" data-select2-id="34">BIF</option>
-                                            <option value="BMD" data-select2-id="35">BMD</option>
-                                            <option value="BND" data-select2-id="36">BND</option>
-                                            <option value="BOB" data-select2-id="37">BOB</option>
-                                            <option value="BRL" data-select2-id="38">BRL</option>
-                                            <option value="BSD" data-select2-id="39">BSD</option>
-                                            <option value="BWP" data-select2-id="40">BWP</option>
-                                            <option value="BZD" data-select2-id="41">BZD</option>
-                                            <option value="CAD" data-select2-id="42">CAD</option>
-                                            <option value="CDF" data-select2-id="43">CDF</option>
-                                            <option value="CHF" data-select2-id="44">CHF</option>
-                                            <option value="CLP" data-select2-id="45">CLP</option>
-                                            <option value="CNY" data-select2-id="46">CNY</option>
-                                            <option value="COP" data-select2-id="47">COP</option>
-                                            <option value="CRC" data-select2-id="48">CRC</option>
-                                            <option value="CVE" data-select2-id="49">CVE</option>
-                                            <option value="CZK" data-select2-id="50">CZK</option>
-                                            <option value="DJF" data-select2-id="51">DJF</option>
-                                            <option value="DKK" data-select2-id="52">DKK</option>
-                                            <option value="DOP" data-select2-id="53">DOP</option>
-                                            <option value="DZD" data-select2-id="54">DZD</option>
-                                            <option value="EGP" data-select2-id="55">EGP</option>
-                                            <option value="ETB" data-select2-id="56">ETB</option>
-                                            <option value="EUR" data-select2-id="57">EUR</option>
-                                            <option value="FJD" data-select2-id="58">FJD</option>
-                                            <option value="FKP" data-select2-id="59">FKP</option>
-                                            <option value="GBP" data-select2-id="60">GBP</option>
-                                            <option value="GEL" data-select2-id="61">GEL</option>
-                                            <option value="GIP" data-select2-id="62">GIP</option>
-                                            <option value="GMD" data-select2-id="63">GMD</option>
-                                            <option value="GNF" data-select2-id="64">GNF</option>
-                                            <option value="GTQ" data-select2-id="65">GTQ</option>
-                                            <option value="GYD" data-select2-id="66">GYD</option>
-                                            <option value="HKD" data-select2-id="67">HKD</option>
-                                            <option value="HNL" data-select2-id="68">HNL</option>
-                                            <option value="HRK" data-select2-id="69">HRK</option>
-                                            <option value="HTG" data-select2-id="70">HTG</option>
-                                            <option value="HUF" data-select2-id="71">HUF</option>
-                                            <option value="IDR" data-select2-id="72">IDR</option>
-                                            <option value="ILS" data-select2-id="73">ILS</option>
-                                            <option value="INR" data-select2-id="74">INR</option>
-                                            <option value="ISK" data-select2-id="75">ISK</option>
-                                            <option value="JMD" data-select2-id="76">JMD</option>
-                                            <option value="JPY" data-select2-id="77">JPY</option>
-                                            <option value="KES" data-select2-id="78">KES</option>
-                                            <option value="KGS" data-select2-id="79">KGS</option>
-                                            <option value="KHR" data-select2-id="80">KHR</option>
-                                            <option value="KMF" data-select2-id="81">KMF</option>
-                                            <option value="KRW" data-select2-id="82">KRW</option>
-                                            <option value="KYD" data-select2-id="83">KYD</option>
-                                            <option value="KZT" data-select2-id="84">KZT</option>
-                                            <option value="LAK" data-select2-id="85">LAK</option>
-                                            <option value="LBP" data-select2-id="86">LBP</option>
-                                            <option value="LKR" data-select2-id="87">LKR</option>
-                                            <option value="LRD" data-select2-id="88">LRD</option>
-                                            <option value="LSL" data-select2-id="89">LSL</option>
-                                            <option value="MAD" data-select2-id="90">MAD</option>
-                                            <option value="MDL" data-select2-id="91">MDL</option>
-                                            <option value="MGA" data-select2-id="92">MGA</option>
-                                            <option value="MKD" data-select2-id="93">MKD</option>
-                                            <option value="MMK" data-select2-id="94">MMK</option>
-                                            <option value="MNT" data-select2-id="95">MNT</option>
-                                            <option value="MOP" data-select2-id="96">MOP</option>
-                                            <option value="MRO" data-select2-id="97">MRO</option>
-                                            <option value="MUR" data-select2-id="98">MUR</option>
-                                            <option value="MVR" data-select2-id="99">MVR</option>
-                                            <option value="MWK" data-select2-id="100">MWK</option>
-                                            <option value="MXN" data-select2-id="101">MXN</option>
-                                            <option value="MYR" data-select2-id="102">MYR</option>
-                                            <option value="MZN" data-select2-id="103">MZN</option>
-                                            <option value="NAD" data-select2-id="104">NAD</option>
-                                            <option value="NGN" data-select2-id="105">NGN</option>
-                                            <option value="NIO" data-select2-id="106">NIO</option>
-                                            <option value="NOK" data-select2-id="107">NOK</option>
-                                            <option value="NPR" data-select2-id="108">NPR</option>
-                                            <option value="NZD" data-select2-id="109">NZD</option>
-                                            <option value="PAB" data-select2-id="110">PAB</option>
-                                            <option value="PEN" data-select2-id="111">PEN</option>
-                                            <option value="PGK" data-select2-id="112">PGK</option>
-                                            <option value="PHP" data-select2-id="113">PHP</option>
-                                            <option value="PKR" data-select2-id="114">PKR</option>
-                                            <option value="PLN" data-select2-id="115">PLN</option>
-                                            <option value="PYG" data-select2-id="116">PYG</option>
-                                            <option value="QAR" data-select2-id="117">QAR</option>
-                                            <option value="RON" data-select2-id="118">RON</option>
-                                            <option value="RSD" data-select2-id="119">RSD</option>
-                                            <option value="RUB" data-select2-id="120">RUB</option>
-                                            <option value="RWF" data-select2-id="121">RWF</option>
-                                            <option value="SAR" data-select2-id="122">SAR</option>
-                                            <option value="SBD" data-select2-id="123">SBD</option>
-                                            <option value="SCR" data-select2-id="124">SCR</option>
-                                            <option value="SEK" data-select2-id="125">SEK</option>
-                                            <option value="SGD" data-select2-id="126">SGD</option>
-                                            <option value="SHP" data-select2-id="127">SHP</option>
-                                            <option value="SLL" data-select2-id="128">SLL</option>
-                                            <option value="SOS" data-select2-id="129">SOS</option>
-                                            <option value="SRD" data-select2-id="130">SRD</option>
-                                            <option value="STD" data-select2-id="131">STD</option>
-                                            <option value="SZL" data-select2-id="132">SZL</option>
-                                            <option value="THB" data-select2-id="133">THB</option>
-                                            <option value="TJS" data-select2-id="134">TJS</option>
-                                            <option value="TOP" data-select2-id="135">TOP</option>
-                                            <option value="TRY" data-select2-id="136">TRY</option>
-                                            <option value="TTD" data-select2-id="137">TTD</option>
-                                            <option value="TWD" data-select2-id="138">TWD</option>
-                                            <option value="TZS" data-select2-id="139">TZS</option>
-                                            <option value="UAH" data-select2-id="140">UAH</option>
-                                            <option value="UGX" data-select2-id="141">UGX</option>
-                                            <option value="UYU" data-select2-id="142">UYU</option>
-                                            <option value="UZS" data-select2-id="143">UZS</option>
-                                            <option value="VND" data-select2-id="144">VND</option>
-                                            <option value="VUV" data-select2-id="145">VUV</option>
-                                            <option value="WST" data-select2-id="146">WST</option>
-                                            <option value="XAF" data-select2-id="147">XAF</option>
-                                            <option value="XCD" data-select2-id="148">XCD</option>
-                                            <option value="XOF" data-select2-id="149">XOF</option>
-                                            <option value="XPF" data-select2-id="150">XPF</option>
-                                            <option value="YER" data-select2-id="151">YER</option>
-                                            <option value="ZAR" data-select2-id="152">ZAR</option>
-                                            <option value="ZMW" data-select2-id="153">ZMW</option>
-                                        </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="18"><span class="selection"><span class="select2-selection custom-select" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-sixc-container"><span class="select2-selection__rendered" id="select2-sixc-container" role="textbox" aria-readonly="true" title="USD"><span>USD</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
-                                    </div>
-                                    <!-- End Select -->
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Form Group -->
-
-                        <div class="mb-2">
-                            <a class="d-inline-block" href="javascript:;" data-toggle="modal" data-target="#productsAdvancedFeaturesModal">
-                                <i class="tio-star tio-lg text-warning mr-1"></i> Set "Compare to" price
-                            </a>
-                        </div>
-
-                        <a class="d-inline-block" href="javascript:;" data-toggle="modal" data-target="#productsAdvancedFeaturesModal">
-                            <i class="tio-star tio-lg text-warning mr-1"></i> Bulk discount pricing
-                        </a>
-
-                        <hr class="my-4">
-
-                        <!-- Toggle Switch -->
-                        <label class="row toggle-switch" for="availabilitySwitch1">
-                  <span class="col-8 col-sm-9 toggle-switch-content">
-                    <span class="text-dark">Availability</span>
-                  </span>
-                            <span class="col-4 col-sm-3">
-                    <input type="checkbox" class="toggle-switch-input" id="availabilitySwitch1">
-                    <span class="toggle-switch-label ml-auto">
-                      <span class="toggle-switch-indicator"></span>
-                    </span>
-                  </span>
-                        </label>
-                        <!-- End Toggle Switch -->
-                    </div>
-                    <!-- Body -->
                 </div>
                 <!-- End Card -->
 
-                <!-- Card -->
-                <div class="card">
-                    <!-- Header -->
-                    <div class="card-header">
-                        <h4 class="card-header-title">Organization</h4>
+        </div>
+    <div class="position-fixed bottom-0 content-centered-x w-100 z-index-99 mb-3" style="max-width: 40rem;">
+        <!-- Card -->
+        <div class="card card-sm bg-dark border-dark mx-2">
+            <div class="card-body">
+                <div class="row justify-content-center justify-content-sm-between">
+
+                    <div class="col-auto">
+                        <button type="button" class="btn btn-ghost-light mr-2">Discard</button>
+                        <button type="button" class="btn btn-primary">Save</button>
                     </div>
-                    <!-- End Header -->
-
-                    <!-- Body -->
-                    <div class="card-body">
-                        <!-- Form Group -->
-                        <div class="form-group">
-                            <label for="vendorLabel" class="input-label">Vendor</label>
-
-                            <input type="text" class="form-control" name="vendor" id="vendorLabel" placeholder="eg. Nike" aria-label="eg. Nike">
-                        </div>
-                        <!-- End Form Group -->
-
-                        <!-- Form Group -->
-                        <div class="form-group">
-                            <label for="categoryLabel" class="input-label">Category</label>
-
-                            <!-- Select -->
-                            <select class="js-select2-custom custom-select select2-hidden-accessible" size="1" style="opacity: 0;" id="categoryLabel" data-hs-select2-options="{
-                            &quot;minimumResultsForSearch&quot;: &quot;Infinity&quot;,
-                            &quot;placeholder&quot;: &quot;Select category&quot;
-                          }" data-select2-id="categoryLabel" tabindex="-1" aria-hidden="true">
-                                <option label="empty" data-select2-id="155"></option>
-                                <option value="Clothing" data-select2-id="156">Clothing</option>
-                                <option value="Shoes" data-select2-id="157">Shoes</option>
-                                <option value="Electronics" data-select2-id="158">Electronics</option>
-                                <option value="Others" data-select2-id="159">Others</option>
-                            </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="154" style="width: 100%;"><span class="selection"><span class="select2-selection custom-select" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-categoryLabel-container"><span class="select2-selection__rendered" id="select2-categoryLabel-container" role="textbox" aria-readonly="true"><span class="select2-selection__placeholder">Select category</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
-                            <!-- End Select -->
-                        </div>
-                        <!-- Form Group -->
-
-                        <!-- Form Group -->
-                        <div class="form-group">
-                            <label for="collectionsLabel" class="input-label">Collections</label>
-
-                            <!-- Select -->
-                            <select class="js-select2-custom custom-select select2-hidden-accessible" size="1" style="opacity: 0;" id="collectionsLabel" data-hs-select2-options="{
-                            &quot;minimumResultsForSearch&quot;: &quot;Infinity&quot;,
-                            &quot;placeholder&quot;: &quot;Select collections&quot;
-                          }" data-select2-id="collectionsLabel" tabindex="-1" aria-hidden="true">
-                                <option label="empty" data-select2-id="161"></option>
-                                <option value="Winter" data-select2-id="162">Winter</option>
-                                <option value="Spring" data-select2-id="163">Spring</option>
-                                <option value="Summer" data-select2-id="164">Summer</option>
-                                <option value="Autumn" data-select2-id="165">Autumn</option>
-                            </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="160" style="width: 100%;"><span class="selection"><span class="select2-selection custom-select" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-collectionsLabel-container"><span class="select2-selection__rendered" id="select2-collectionsLabel-container" role="textbox" aria-readonly="true"><span class="select2-selection__placeholder">Select collections</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
-                            <!-- End Select -->
-
-                            <span class="form-text">Add this product to a collection so it’s easy to find in your store.</span>
-                        </div>
-                        <!-- Form Group -->
-
-                        <label for="tagsLabel" class="input-label">Tags</label>
-
-                        <tags class="tagify js-tagify tagify-form-control form-control tagify--noTags tagify--empty" tabindex="-1">
-                            <span contenteditable="" data-placeholder="Enter tags here" aria-placeholder="Enter tags here" class="tagify__input" role="textbox" aria-autocomplete="both" aria-multiline="false"></span>
-                        </tags><input type="text" class="js-tagify tagify-form-control form-control" name="tagsName" id="tagsLabel" placeholder="Enter tags here" aria-label="Enter tags here">
-                    </div>
-                    <!-- End Body -->
                 </div>
-                <!-- End Card -->
+                <!-- End Row -->
             </div>
         </div>
-        <!-- End Row -->
-
-        <div class="position-fixed bottom-0 content-centered-x w-100 z-index-99 mb-3" style="max-width: 40rem;">
-            <!-- Card -->
-            <div class="card card-sm bg-dark border-dark mx-2">
-                <div class="card-body">
-                    <div class="row justify-content-center justify-content-sm-between">
-                        <div class="col">
-                            <button type="button" class="btn btn-ghost-danger">Delete</button>
-                        </div>
-                        <div class="col-auto">
-                            <button type="button" class="btn btn-ghost-light mr-2">Discard</button>
-                            <button type="button" class="btn btn-primary">Save</button>
-                        </div>
-                    </div>
-                    <!-- End Row -->
-                </div>
-            </div>
-            <!-- End Card -->
-        </div>
+        <!-- End Card -->
+    </div>
+    </div>
     </div>
 
 </form>
