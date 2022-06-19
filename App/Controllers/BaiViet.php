@@ -2,16 +2,29 @@
 
 namespace App\Controllers;
 
+
+use Core\Controller;
 use Core\Model;
 use Core\View;
 
-class BaiViet extends Model
+class BaiViet extends Controller
+
+
 {
     function index()
     {
         $hehe =$_SERVER;
         View::renderTemplate('BaiViet/baiviet.html',[$hehe]);
     }
+
+    public function saveBaiViet ()
+    {
+        $baiViet  = new \App\Models\BaiViet($_POST);
+        $baiViet->save();
+        
+
+    }
+
     function admin(){
         $sql = 'SELECT * FROM bai_viet';
         $db = static::getDB();
@@ -21,4 +34,5 @@ class BaiViet extends Model
 
         View::renderTemplate('BaiViet/danhsachadmin.html',['data' => $data]);
 }
+
 }
