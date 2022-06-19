@@ -46,7 +46,7 @@
 
 {% endblock %}
 {% block body %}
-<form method="post" action="/App/Controllers/BvietController.php/create">
+<form method="post" action="http://localhost/baiviet/save-bai-viet">
     <div class="content container-fluid">
         <!-- Page Header -->
         <div class="page-header">
@@ -92,6 +92,14 @@
 
                             <input type="text" class="form-control" name="tac_gia" id="tac_gia"
                                    placeholder="Nhập tên tác giả" aria-label="Shirt, t-shirts, etc.">
+                        </div>
+                        <div class="form-group">
+                            <label for="anh" class="input-label">Ảnh<i class="tio-help-outlined text-body ml-1"
+                                                                               data-toggle="tooltip"
+                                                                               data-placement="top"></i></label>
+
+                            <input type="text" class="form-control" name="anh" id="anh"
+                                   placeholder="Dán link ảnh" aria-label="Shirt, t-shirts, etc.">
                         </div>
 
                         <div class="form-group">
@@ -250,41 +258,9 @@
                 </div>
                 <!-- End Card -->
 
-                <!-- Card -->
-                <div class="card mb-8 mb-lg-0">
-                    <!-- Header -->
-                    <div class="card-header">
-                        <h4 class="card-header-title">Upload ảnh</h4>
-
-                        <!-- Unfold -->
-                        <div class="hs-unfold">
-
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- Ảnh upload -->
-                    <div class="card-body">
-                        <!-- Dropzone -->
-                        <div id="anh" class="js-dropzone dropzone-custom custom-file-boxed dz-clickable" name="anh">
-                            <div class="dz-message custom-file-boxed-label">
-                                <img class="avatar avatar-xl avatar-4by3 mb-3" src="\public\images\upload-image.svg" alt="Image Description">
-                                <h5 class="mb-1">Choose files to upload</h5>
-                                <p class="mb-2">or</p>
-                                <span class="btn btn-sm btn-primary">Browse files</span>
-                            </div>
-                        </div>
-
-                    </div>
-
-
-
-                </div>
 
                 <!--Noi dung chinh -->
-                <label class="input-label">Nội dung chính bài viết <span
+                <label class="ml-4 input-label">Nội dung chính bài viết <span
 
                         class="input-label-secondary">(Optional)</span></label>
 
@@ -389,8 +365,8 @@
                 <div class="row justify-content-center justify-content-sm-between">
 
                     <div class="col-auto">
-                        <button type="button" class="btn btn-ghost-light mr-2">Discard</button>
-                        <button type="button" class="btn btn-primary">Save</button>
+
+                        <button type="submit" class="btn btn-primary">Save</button>
                     </div>
                 </div>
                 <!-- End Row -->
