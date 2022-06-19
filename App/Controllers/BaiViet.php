@@ -16,8 +16,8 @@ class BaiViet extends Controller
     public function saveBaiViet ()
     {
         $baiViet  = new \App\Models\BaiViet($_POST);
-        $baiViet->save();
-        
+
+        $data = $baiViet->save();
 
     }
 }
