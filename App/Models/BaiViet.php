@@ -41,6 +41,22 @@ class BaiViet extends Model
             VALUES (:tieude, :ngaytao, :tacgia, :noidungphu, :noidungchinh, :image, :chude, :tags, 0)';
             $db = static::getDB();
             $stmt = $db->prepare($sql);
+//            echo $this->tieu_de;
+//            echo "/";
+//            echo $this->ngay_tao;
+//            echo "/";
+//            echo $this->tac_gia;
+//            echo "/";
+//            echo $this->noi_dung_phu;
+//            echo "/";
+//            echo $this->noi_dung_chinh;
+//            echo "/";
+//            echo $this->anh;
+//            echo "/";
+//            echo $this->chu_de;
+//            echo "/";
+//            echo $this->tag;
+//            echo "/";
 
 
             $stmt->bindValue(':tieude', $this->tieu_de, PDO::PARAM_STR);
@@ -53,7 +69,11 @@ class BaiViet extends Model
             $stmt->bindValue(':tags', $this->tag, PDO::PARAM_STR);
 
 
+
+
+
             return $stmt->execute();
+
         }
 
         return false;
