@@ -1,0 +1,203 @@
+{% extends 'base_admin.html' %}
+
+{% block title %}Chỉnh sửa thông tin bài viết{% endblock %}
+
+{% block body %}
+<main id="content" role="main" class="main">
+    <!-- Content -->
+    <div class="content container-fluid">
+
+        <form method="post" id="formChinhSuaBaiViet" action="/Baiviet/UpdateBaiviet">
+            {% for data in datas %}
+            <div class="card mb-3 mb-lg-5">
+                <div class="card-header">
+                    <h2 class="card-title h4">Chỉnh sửa thông tin bài viết</h2>
+                </div>
+
+                <!-- Body -->
+                <div class="card-body">
+                    <!-- Form -->
+                    <form>
+                        <!-- Form Group -->
+                        <div class="row form-group">
+
+                            <div class="col-sm-9">
+                                <div class="input-group input-group-sm-down-break">
+                                    <input type="hidden" class="form-control" name="id" value="{{data.id}}">
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Form Group -->
+
+
+                        <!-- Form Group -->
+                        <div class="row form-group">
+                            <label for="TieudeLabel" class="col-sm-3 col-form-label input-label">Tiêu đề bài
+                                viết </label>
+
+                            <div class="col-sm-9">
+                                <div class="input-group input-group-sm-down-break">
+                                    <input type="text" class="form-control" name="tieu_de" value="{{data.tieu_de}}">
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Form Group -->
+
+                        <!-- Form Group -->
+                        <div class="row form-group">
+                            <label class="col-sm-3 col-form-label input-label">Tác giả bài viết</label>
+
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="ten_tac_gia" value="{{data.tac_gia}}">
+                            </div>
+                        </div>
+                        <!-- End Form Group -->
+                        <!-- Form Group -->
+                        <div class="row form-group">
+                            <label for="chu_de" class="col-sm-3 col-form-label input-label">Chủ đề bài viết </label>
+
+                            <div class="col-sm-9">
+                                <select id="chu_de" name="chu_de" class="form-select form-select-lg mb-3 w-100"
+                                        aria-label=".form-select-lg example" value="{{data.chu_de}}"
+                                        style="height: 30px">
+
+                                    <option value="{{data.chu_de}}">{{data.chu_de}}</option>
+                                    <option value="Thời sự">Thời sự</option>
+                                    <option value="Kinh doanh">Kinh doanh</option>
+                                    <option value="Khoa học">Khoa học</option>
+                                    <option value="Giải trí">Giải trí</option>
+                                    <option value="Pháp luật">Pháp luật</option>
+                                    <option value="Thể thao">Thể thao</option>
+                                    <option value="Sức khoẻ">Sức khoẻ</option>
+
+                                </select>
+                            </div>
+                        </div>
+                        <!-- End Form Group -->
+                        <!-- Form Group -->
+                        <div class="row form-group">
+                            <label class="col-sm-3 col-form-label input-label">Nội dung bài viết </label>
+
+                            <div class="col-sm-9" style="width:400px">
+                                <!-- <input type="text" class="form-control" name="noi_dung_chinh" value="{{data.noi_dung_chinh}}" > -->
+                                <textarea id="basic-example2" name="noi_dung_chinh" style=" width: 100%; height: 10rem;"> {{data.noi_dung_chinh}} </textarea>
+
+                            </div>
+
+                        </div>
+                        <!-- End Form Group -->
+
+                        <!-- Form Group -->
+                        <div class="row form-group">
+                            <label class="col-sm-3 col-form-label input-label">Nội dung phụ của bài viết</label>
+
+
+                            <div class="col-sm-9">
+                                <!-- <input type="text" class="form-control" name="noi_dung_phu" value="{{data.noi_dung_phu}}" > -->
+                                <textarea id="basic-example" name="noi_dung_phu" style=" width: 100%; height: 10rem;"> {{data.noi_dung_phu}} </textarea>
+
+                            </div>
+                        </div>
+                        <!-- End Form Group -->
+
+                        <!-- Form Group -->
+                        <div class="row form-group">
+                            <label class="col-sm-3 col-form-label input-label">Ảnh bài viết</label>
+
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="link_anh" value="{{data.link_anh}}">
+                            </div>
+                        </div>
+                        <!-- End Form Group -->
+
+                        <!-- Form Group -->
+                        <div class="row form-group">
+                            <label class="col-sm-3 col-form-label input-label">Số lượt xem</label>
+
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="luot_xem" value="{{data.luot_xem}}">
+
+                            </div>
+                        </div>
+                        <!-- End Form Group -->
+
+                        <!-- Form Group -->
+                        <div class="row form-group">
+                            <label for="tag" class="col-sm-3 col-form-label input-label">Tag</label>
+
+                            <div class="col-sm-9 ">
+
+                                <select id="tag" name="tag" class="form-select form-select-lg mb-3 w-100"
+                                        aria-label=".form-select-lg example" value="{{data.tag}}" style="height: 30px">
+                                    <option value="{{data.tag}}">{{data.tag}}</option>
+                                    <option value="Xu hướng">Xu hướng</option>
+                                    <option value="Toàn cầu">Toàn cầu</option>
+                                    <option value="Thời trang">Thời trang</option>
+                                    <option value="Vbiz">Vbiz</option>
+                                    <option value="Cbiz">Cbiz</option>
+                                    <option value="Kpop">Kpop</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- End Form Group -->
+
+                        <!-- Form Group -->
+                        <div class="row form-group">
+                            <label for="locationLabel" class="col-sm-3 col-form-label input-label">Ngày khởi tạo</label>
+
+                            <div class="col-sm-9">
+                                <input type="date" class="form-control" name="ngay_tao" value="{{data.ngay_tao}}">
+
+                            </div>
+                        </div>
+                        <!-- End Form Group -->
+                        <div class="d-flex justify-content-center mt-4">
+                            <button class="btn btn-primary col-4" type="submit"> Lưu lại</button>
+                        </div>
+
+                    </form>
+                </div>
+                {% endfor %}
+        </form>
+    </div>
+</main>
+<script src="https://cdn.tiny.cloud/1/mhpoiczxi64m4y4hws6p42eokiurxbd5kr4j3h7752oshmud/tinymce/5/tinymce.min.js"
+        referrerpolicy="origin"></script>
+<script>
+    tinymce.init({
+        selector: 'textarea#basic-example',
+        height: 500,
+        menubar: false,
+        plugins: [
+            'advlist autolink lists link image charmap print preview anchor',
+            'searchreplace visualblocks code fullscreen',
+            'insertdatetime media table paste code help wordcount'
+        ],
+        toolbar: 'undo redo | formatselect | ' +
+            'bold italic backcolor | alignleft aligncenter ' +
+            'alignright alignjustify | bullist numlist outdent indent | ' +
+            'removeformat | help',
+        content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+    });
+
+
+    tinymce.init({
+        selector: 'textarea#basic-example2',
+        height: 500,
+        menubar: false,
+        plugins: [
+            'advlist autolink lists link image charmap print preview anchor',
+            'searchreplace visualblocks code fullscreen',
+            'insertdatetime media table paste code help wordcount'
+        ],
+        toolbar: 'undo redo | formatselect | ' +
+            'bold italic backcolor | alignleft aligncenter ' +
+            'alignright alignjustify | bullist numlist outdent indent | ' +
+            'removeformat | help',
+        content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+    });
+</script>
+
+{% endblock %}

@@ -20,7 +20,7 @@ class Signup extends \Core\Controller
      */
     public function newAction()
     {
-        View::renderTemplate('Signup/new.html');
+        View::renderTemplate('Signup/signup.html');
     }
 
     /**
@@ -39,7 +39,7 @@ class Signup extends \Core\Controller
 
         } else {
 
-            View::renderTemplate('Signup/new.html', [
+            View::renderTemplate('Signup/signup.html', [
                 'user' => $user
             ]);
 
