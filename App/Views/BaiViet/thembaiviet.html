@@ -1,0 +1,217 @@
+{% extends 'base_admin.html' %}
+
+
+{% block body %}
+<main id="content" role="main" class="main">
+    <!-- Content -->
+    <div class="content container-fluid">
+        <form method="post" action="http://localhost/baiviet/save-bai-viet">
+            <div class="content container-fluid">
+                <!-- Page Header -->
+                <div class="page-header">
+                    <div class="row align-items-center">
+                        <div class="col-sm mb-2 mb-sm-0">
+
+
+                            <h1 class="page-header-title">Thêm mới bài viết</h1>
+                        </div>
+                    </div>
+                    <!-- End Row -->
+                </div>
+                <!-- End Page Header -->
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <!-- Card -->
+                        <div class="card mb-8 mb-lg-0">
+                            <!-- Header -->
+                            <div class="card-header">
+                                <h4 class="card-header-title">Thông tin bài viết</h4>
+                            </div>
+                            <!-- End Header -->
+
+                            <!-- Body -->
+                            <div class="card-body">
+                                <!-- Thêm tiêu đề -->
+                                <div class="form-group">
+                                    <label for="tieu_de" class="input-label">Tiêu đề <i
+                                            class="tio-help-outlined text-body ml-1"
+                                            data-toggle="tooltip"
+                                            data-placement="top"></i></label>
+
+                                    <input type="text" class="form-control" name="tieu_de" id="tieu_de"
+                                           placeholder="Nhập tiêu đề bài viết ...." aria-label="Shirt, t-shirts, etc.">
+                                </div>
+                                <!--  -->
+
+                                <!-- Thêm tên tác giả-->
+                                <div class="form-group">
+                                    <label for="tac_gia" class="input-label">Tác giả<i
+                                            class="tio-help-outlined text-body ml-1"
+                                            data-toggle="tooltip"
+                                            data-placement="top"></i></label>
+
+                                    <input type="text" class="form-control" name="tac_gia" id="tac_gia"
+                                           placeholder="Nhập tên tác giả" aria-label="Shirt, t-shirts, etc.">
+                                </div>
+                                <div class="form-group">
+                                    <label for="anh" class="input-label">Ảnh<i class="tio-help-outlined text-body ml-1"
+                                                                               data-toggle="tooltip"
+                                                                               data-placement="top"></i></label>
+
+                                    <input type="text" class="form-control" name="anh" id="anh"
+                                           placeholder="Dán link ảnh" aria-label="Shirt, t-shirts, etc.">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="ngay_tao" class="input-label">Ngày tạo <i
+                                            class="tio-help-outlined text-body ml-1" data-toggle="tooltip"
+                                            data-placement="top"></i></label>
+
+                                    <input type="date" class="form-control" name="ngay_tao" id="ngay_tao">
+                                </div>
+                                <!--  -->
+                                <!-- Thêm chủ đề -->
+                                <div class="row">
+                                    <div class="col-sm-6">
+
+                                        <div class="form-group">
+                                            <label for="chu_de" class="input-label">Chủ đề<i
+                                                    class="tio-help-outlined text-body ml-1" data-toggle="tooltip"
+                                                    data-placement="top"></i></label>
+
+                                            <select id="chu_de" name="chu_de" class="form-select form-select-lg mb-3"
+                                                    aria-label=".form-select-lg example" style="width:85%;height: 30px">
+                                                <option value="" selected>Chọn chủ đề</option>
+                                                <option value="Thời sự">Thời sự</option>
+                                                <option value="Kinh doanh">Kinh doanh</option>
+                                                <option value="Khoa học">Khoa học</option>
+                                                <option value="Giải trí">Giải trí</option>
+                                                <option value="Pháp luật">Pháp luật</option>
+                                                <option value="Thể thao">Thể thao</option>
+                                                <option value="Sức khoẻ">Sức khoẻ</option>
+
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                    <!-- Thêm tag -->
+                                    <div class="col-sm-6">
+
+                                        <div class="form-group">
+                                            <label for="tag" class="input-label">Tag<i
+                                                    class="tio-help-outlined text-body ml-1"
+                                                    data-toggle="tooltip"
+                                                    data-placement="top"></i></label>
+
+                                            <select id="tag" name="tag" class="form-select form-select-lg mb-3"
+                                                    aria-label=".form-select-lg example" style="width:85%;height: 30px">
+                                                <option value="" selected>Chọn tag</option>
+                                                <option value="Xu hướng">Xu hướng</option>
+                                                <option value="Toàn cầu">Toàn cầu</option>
+                                                <option value="Thời trang">Thời trang</option>
+                                                <option value="Vbiz">Vbiz</option>
+                                                <option value="Cbiz">Cbiz</option>
+                                                <option value="Kpop">Kpop</option>
+
+
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!-- Thêm nội dung phụ -->
+                                <label class="input-label ml-4" style="font-size: 15px;">Tóm tắt nội dung <span
+
+                                        class="input-label-secondary">(Optional)</span></label>
+
+
+                                <!--Noi dung phu -->
+                                <textarea id="basic-examples" name="noi_dung_phu" class="ml-4"
+                                          placeholder="Nhập nội dung tóm tắt(Tối đa 1000 ký tự)...">
+
+                </textarea>
+                                <!-- end noi dung phu -->
+                            </div>
+                            <!-- Body -->
+                        </div>
+                        <!-- End Card -->
+
+
+                        <!--Noi dung chinh -->
+                        <label class="ml-4 input-label" style="font-size: 15px;">Nội dung chính bài viết <span
+
+                                class="input-label-secondary">(Optional)</span></label>
+
+                        <textarea id="basic-example" name="noi_dung_chinh" style="padding-bottom: 15px" class="ml-4"
+                                  placeholder="Nhập nội dung bài viết...">
+
+                </textarea>
+                        <!--ND chinh - end -->
+
+                    </div>
+                </div>
+                <!-- End Card -->
+
+            </div>
+            <div class="position-fixed bottom-0 content-centered-x w-100 z-index-99 mb-3" style="max-width: 40rem;">
+                <!-- Card -->
+                <div class="card card-sm bg-dark border-dark mx-2">
+                    <div class="card-body">
+                        <div class="row justify-content-center justify-content-sm-between">
+
+                            <div class="col-auto">
+
+                                <button type="submit" class="btn btn-primary">Save</button>
+                            </div>
+                        </div>
+                        <!-- End Row -->
+                    </div>
+                </div>
+                <!-- End Card -->
+            </div>
+
+
+        </form>
+    </div>
+</main>
+<script src="https://cdn.tiny.cloud/1/mhpoiczxi64m4y4hws6p42eokiurxbd5kr4j3h7752oshmud/tinymce/5/tinymce.min.js"
+        referrerpolicy="origin"></script>
+<script>
+    tinymce.init({
+        selector: 'textarea#basic-example',
+        height: 500,
+        menubar: false,
+        plugins: [
+            'advlist autolink lists link image charmap print preview anchor',
+            'searchreplace visualblocks code fullscreen',
+            'insertdatetime media table paste code help wordcount'
+        ],
+        toolbar: 'undo redo | formatselect | ' +
+            'bold italic backcolor | alignleft aligncenter ' +
+            'alignright alignjustify | bullist numlist outdent indent | ' +
+            'removeformat | help',
+        content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+    });
+
+
+    tinymce.init({
+        selector: 'textarea#basic-examples',
+        height: 500,
+        menubar: false,
+        plugins: [
+            'advlist autolink lists link image charmap print preview anchor',
+            'searchreplace visualblocks code fullscreen',
+            'insertdatetime media table paste code help wordcount'
+        ],
+        toolbar: 'undo redo | formatselect | ' +
+            'bold italic backcolor | alignleft aligncenter ' +
+            'alignright alignjustify | bullist numlist outdent indent | ' +
+            'removeformat | help',
+        content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+    });
+</script>
+
+
+{% endblock %}
